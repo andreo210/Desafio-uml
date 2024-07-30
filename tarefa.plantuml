@@ -1,0 +1,25 @@
+@startuml Desafio
+class IPhone{
+    +String modelo
+    +String imei
+}
+interface ReprodutorMusical{
+    +String tocar()
+    +String pausar()
+    +String selecionarMusica()
+}
+abstract class AparelhoTelefonico{
+    +String ligar()
+    +String atender()
+    +String iniciarCorreioDeVoz()
+}
+interface NavegadorInternet{
+    +String exibirPagina()
+    +String adicionarNovaAba()
+    +String AtualizarPagina()
+}
+AparelhoTelefonico <|-- IPhone
+NavegadorInternet -- IPhone
+ReprodutorMusical -- IPhone
+
+@enduml
